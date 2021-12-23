@@ -1,0 +1,19 @@
+version: "3"
+    
+volumes:
+    volume-mariaDB:
+    
+services:
+    db:
+        image: mariadb:10.7.1-focal
+        container_name: tp3-DB
+        ports:
+          - 3306:3306
+        volumes:
+            - volume-mariaDB:/var/lib/maridb/data
+        environment:
+            MARIADB_USER: tp3user
+            MARIADB_PASSWORD: BUufjwennjen8920
+            MARIADB_DATABASE: tp3
+            MARIADB_ROOT_PASSWORD: ThisBeRootPassword
+        restart: always
