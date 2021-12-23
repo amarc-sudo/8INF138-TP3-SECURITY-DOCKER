@@ -30,3 +30,12 @@ Il y a 3 utilisateur :
 | utilisateur2 | Tp3Aurelien | affaire     |
 
 Il n'y a qu'une seule page de connexion pour les trois utilisateur
+
+## Changement d'un mot de passe a la main
+
+J'ai fourni un script de generation de mot de passe au cas ou si on a besoin de changer le mot de pass d'un utilisateur afin d'effectuer a des test. 
+
+```
+cd Scripts
+java passwordGenerator.java lePasswordQuonSouhaiteEncrypter
+```
