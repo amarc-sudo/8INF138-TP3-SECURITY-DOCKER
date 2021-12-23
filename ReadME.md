@@ -11,7 +11,7 @@ Pour lancer et tester le projet il faut faire les commandes suivantes :
 
 ```
 git clone https://github.com/amarc-sudo/tp3-security-docker.git
-cd tp3-security-docker
+cd 8INF138-TP3-SECURITY-DOCKER
 git submodule init
 git submodule update
 git submodule foreach git pull origin master
