@@ -17,3 +17,28 @@ services:
             MARIADB_DATABASE: tp3
             MARIADB_ROOT_PASSWORD: ThisBeRootPassword
         restart: always
+    tp3-back:
+        build: ./back
+        container_name: tp3-back
+        environment:
+            - DB_HOST=localhost
+            - DB_USER=u8inf422
+            - DB_PASSWORD=ThisBePassword
+            - DB_PORT=3306
+            - DB_NAME=u8inf422
+        ports:
+            - 8080:8080
+        links:
+            - db
+        depends_on:
+            - db
+        
+    tp3-front:
+        build: ./front
+        container_name: tp3-front
+        links:
+            - tp3-back
+        depends_on:
+            - tp3-back
+        ports:
+            - 4200:4200

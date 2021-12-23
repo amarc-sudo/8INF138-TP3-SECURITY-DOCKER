@@ -1,6 +1,6 @@
 [submodule "back"]
 	path = back
-	url = ./back
+	url = https://github.com/amarc-sudo/tp3-security-back.git
 [submodule "front"]
 	path = front
-	url = ./front
+	url = https://github.com/amarc-sudo/tp3-security-front.git
