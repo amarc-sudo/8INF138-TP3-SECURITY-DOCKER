@@ -10,7 +10,7 @@ services:
         ports:
           - 3306:3306
         volumes:
-            - volume-mariaDB:/var/lib/maridb/data
+            - ./Scripts/schema.sql:/docker-entrypoint-initdb.d/init-script.sql
         environment:
             MARIADB_USER: tp3user
             MARIADB_PASSWORD: BUufjwennjen8920
@@ -21,17 +21,17 @@ services:
         build: ./back
         container_name: tp3-back
         environment:
-            - DB_HOST=localhost
-            - DB_USER=u8inf422
-            - DB_PASSWORD=ThisBePassword
+            - DB_HOST=tp3-DB
+            - DB_USER=tp3user
+            - DB_PASSWORD=BUufjwennjen8920
             - DB_PORT=3306
-            - DB_NAME=u8inf422
+            - DB_NAME=tp3
         ports:
             - 8080:8080
         links:
-            - db
+            - tp3-DB
         depends_on:
-            - db
+            - tp3-DB
         
     tp3-front:
         build: ./front
