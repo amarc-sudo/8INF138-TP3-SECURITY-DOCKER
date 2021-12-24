@@ -27,7 +27,7 @@ create table tp3.securityData
     idSecurity  int auto_increment
         primary key,
     tagSecurity varchar(255)         null,
-    variables  int null,
+    variable  int null,
     status      tinyint(1) default 0 null
 );
 
