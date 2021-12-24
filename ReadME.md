@@ -20,6 +20,8 @@ git submodule foreach git pull origin master
 docker-compose up -d --force-recreate
 ```
 
+:warning: ATTENTION :warning: PARFOIS LE DOCKER DU BACK EST A RELANCER VIA L'INTERFACE
+
 Les ports 4200, 8080 et 3306 doivent etre disponible sur la machine
 
 ## :walking: Marche a suivre pour le test
