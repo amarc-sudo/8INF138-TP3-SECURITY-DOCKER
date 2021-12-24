@@ -23,6 +23,10 @@ docker-compose up -d --force-recreate
 Les ports 4200, 8080 et 3306 doivent etre disponible sur la machine
 
 ## :walking: Marche a suivre pour le test
+
+Adresse du site :
+http://localhost:4200
+
 Il y a 3 utilisateur :
 
 | Login        | Password    | Role        |
